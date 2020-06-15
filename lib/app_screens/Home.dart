@@ -11,7 +11,18 @@ class Home extends StatelessWidget {
           titleSection,
           bodySection,
           RaisedButton(
-            onPressed: () {},
+            onPressed: () {
+              showDialog(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return AlertDialog(
+                      title: Text("Greetings!...."),
+                      content: Text(
+                        "Hello, Welcome to OTS Learning Hub",
+                      ),
+                    );
+                  });
+            },
             color: Colors.teal[300],
             focusColor: Colors.teal[400],
             child: Padding(
