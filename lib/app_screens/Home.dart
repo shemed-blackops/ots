@@ -3,12 +3,30 @@ import 'package:flutter/material.dart';
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: <Widget>[
-        titleSection,
-        bodySection,
-      ],
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: <Widget>[
+          titleSection,
+          bodySection,
+          RaisedButton(
+            onPressed: () {},
+            color: Colors.teal[300],
+            focusColor: Colors.teal[400],
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(12.0, 20.0, 12.0, 20.0),
+              child: Text(
+                "Say Hello",
+                style: TextStyle(
+                  fontSize: 24.0,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 
